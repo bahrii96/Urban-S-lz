@@ -68,8 +68,20 @@
       bottom: rem(50);
       cursor: pointer;
       transition: all 0.3s ease 0s;
+      svg {
+         @media (max-width: $mobile) {
+            width: rem(32);
+            height: rem(22);
+         }
+      }
       &:hover {
          svg {
+            width: rem(32);
+            height: rem(22);
+            @media (max-width: $mobile) {
+               width: rem(32);
+               height: rem(22);
+            }
             path {
                stroke: #587c2e;
             }
