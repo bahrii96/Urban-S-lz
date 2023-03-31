@@ -1,0 +1,150 @@
+.living {
+   // .living__overlay
+   &__top-body {
+      position: relative;
+   }
+   &__overlay {
+      position: absolute;
+      background-image: url('./../img/living.png');
+      background-position: top center;
+      background-repeat: no-repeat;
+      z-index: -7;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+   }
+
+   // .living__container
+
+   &__container {
+   }
+
+   &__subtitle {
+      font-family: 'Baskerville';
+      font-style: normal;
+      font-weight: 700;
+      font-size: rem(28);
+      line-height: math.div(30, 28);
+      color: #ffffff;
+      padding-top: rem(50);
+      padding-bottom: rem(45);
+      max-width: rem(790);
+      @include adaptiveValue('font-size', 28, 16);
+      @include adaptiveValue('padding-top', 50, 25);
+      @include adaptiveValue('padding-bottom', 45, 25);
+   }
+   &__text-subtitle {
+      font-family: 'Baskerville';
+      font-style: normal;
+      font-weight: 400;
+      font-size: rem(24);
+      line-height: math.div(30, 24);
+      color: #ffffff;
+      padding-bottom: rem(130);
+      max-width: rem(790);
+      @include adaptiveValue('font-size', 24, 16);
+      @include adaptiveValue('padding-bottom', 130, 50);
+   }
+   // .living__bookmark
+
+   &__bookmark {
+      position: absolute;
+      right: 0;
+      top: rem(95);
+      background-color: white;
+      padding: rem(22) rem(22) rem(22) rem(75);
+      border-radius: rem(200) 0 0 rem(200);
+
+      @media (max-width: $tablet) {
+         top: rem(0);
+         padding: rem(10) rem(10) rem(10) rem(65);
+      }
+      @media (max-width: $mobile) {
+         padding: rem(10) rem(10) rem(10) rem(45);
+      }
+
+      p {
+         font-family: 'DINNeuzeitGrotesk LT Light';
+         font-style: normal;
+         font-weight: 400;
+         font-size: rem(22);
+         line-height: math.div(30, 22);
+         text-align: center;
+         color: #587c2e;
+         @include adaptiveValue('font-size', 22, 14);
+      }
+      svg {
+         display: block;
+         margin: 0 auto;
+
+         @media (max-width: $tablet) {
+            width: rem(40);
+         }
+         @media (max-width: $mobile) {
+            display: none;
+         }
+         path {
+            transition: all 0.3s ease 0s;
+         }
+      }
+      &:hover {
+         svg path {
+            fill: #a6cf4c;
+         }
+      }
+   }
+
+   // .living__box
+
+   &__box {
+      ul {
+         display: grid;
+         gap: rem(30);
+         grid-template-columns: repeat(3, 1fr);
+         margin-top: rem(65);
+         margin-bottom: rem(120);
+         @include adaptiveValue('gap', 30, 10);
+         @include adaptiveValue('margin-top', 65, 25);
+         @include adaptiveValue('margin-bottom', 120, 25);
+         @media (max-width: $mobile) {
+            grid-template-columns: repeat(2, 1fr);
+         }
+         li {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: rem(30) rem(20);
+            background-color: #587c2e;
+            transition: all 0.3s ease-in-out;
+            h3 {
+               font-family: 'DINNeuzeitGrotesk LT Light';
+               font-style: normal;
+               font-weight: 400;
+               font-size: rem(22);
+               line-height: math.div(30, 22);
+               color: #ffffff;
+               margin-bottom: rem(40);
+               text-align: center;
+               @include adaptiveValue('font-size', 22, 14);
+            }
+            svg {
+               path {
+                  transition: all 0.3s ease 0s;
+               }
+            }
+            &:hover {
+               background-color: #a6cf4c;
+               svg path {
+                  fill: $hoverColor;
+               }
+            }
+         }
+      }
+   }
+}
+.title {
+}
+.subtitle {
+}
+.title-green {
+}

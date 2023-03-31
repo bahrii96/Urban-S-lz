@@ -1,0 +1,299 @@
+.microliving {
+   // .microliving__header-body
+
+   &__header-body {
+      position: relative;
+      height: rem(785);
+      @include adaptiveValue('height', 785, 385);
+   }
+   .title {
+      margin-bottom: rem(60);
+      @include adaptiveValue('margin-bottom', 60, 30);
+   }
+   // .microliving__overlay
+
+   &__overlay {
+      position: absolute;
+      background-image: url('./../img/reading.png');
+      background-position: top center;
+      background-repeat: no-repeat;
+      z-index: -7;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+   }
+
+   // .microliving__bookmark
+
+   &__bookmark {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+
+      display: inline-block;
+      background-color: #587c2e;
+      padding-left: rem(125);
+      padding-right: rem(160);
+
+      padding-top: rem(35);
+      padding-bottom: rem(35);
+      @include adaptiveValue('padding-left', 125, 25);
+      @include adaptiveValue('padding-right', 110, 60);
+      @include adaptiveValue('padding-top', 35, 15);
+      @include adaptiveValue('padding-bottom', 35, 15);
+      li {
+         margin-top: rem(30);
+         @include adaptiveValue('margin-top', 30, 18);
+      }
+   }
+
+   &__bookmark-title {
+      font-family: 'Baskerville';
+      font-style: normal;
+      font-weight: 700;
+      font-size: rem(30);
+      line-height: math.div(30, 30);
+      color: #a6cf4c;
+      @include adaptiveValue('font-size', 30, 18);
+   }
+
+   // .location__bookmark-number
+
+   &__bookmark-number {
+      font-family: 'Baskerville';
+      font-style: normal;
+      font-weight: 700;
+      font-size: rem(26);
+      display: block;
+      color: #ffffff;
+      @include adaptiveValue('font-size', 26, 16);
+   }
+   // .microliving__bookmark-text
+
+   &__bookmark-text {
+      font-family: 'Baskerville';
+      font-style: normal;
+      font-weight: 400;
+      font-size: rem(20);
+
+      color: #ffffff;
+      @include adaptiveValue('font-size', 20, 14);
+   }
+
+   &__slider {
+      position: relative;
+      background: hsla(88, 46%, 33%, 1);
+
+      background: linear-gradient(135deg, hsla(88, 46%, 33%, 1) 0%, hsla(79, 58%, 55%, 1) 100%);
+
+      background: -moz-linear-gradient(135deg, hsla(88, 46%, 33%, 1) 0%, hsla(79, 58%, 55%, 1) 100%);
+
+      background: -webkit-linear-gradient(135deg, hsla(88, 46%, 33%, 1) 0%, hsla(79, 58%, 55%, 1) 100%);
+      padding-top: rem(70);
+      padding-bottom: rem(100);
+
+      @include adaptiveValue('padding-top', 70, 30);
+      @include adaptiveValue('padding-bottom', 100, 50);
+   }
+
+   &__slide {
+      display: grid;
+      // align-items: center;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: rem(20);
+      @media (max-width: $mobile) {
+         display: flex;
+         flex-direction: column;
+      }
+   }
+   .swiper-pagination {
+      margin-top: rem(30);
+   }
+   .swiper-pagination,
+   .swiper-pagination-apartament {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: rem(15);
+      .swiper-pagination-bullet {
+         width: rem(15);
+         height: rem(15);
+         border-radius: 50%;
+         background-color: #a6cf4c;
+
+         &.swiper-pagination-bullet-active {
+            opacity: 1;
+            background-color: #587c2e;
+         }
+      }
+   }
+   .swiper-button-prev,
+   .swiper-button-next {
+      &:before {
+         content: '';
+         position: absolute;
+         background-image: url('./../img/navigation.svg');
+         background-position: top center;
+         background-repeat: no-repeat;
+         bottom: rem(45);
+         width: rem(30);
+         height: rem(15);
+         background-size: cover;
+         color: #a6cf4c;
+      }
+   }
+   .swiper-button-next {
+      &:before {
+         right: rem(75);
+         transform: rotate(180deg);
+      }
+   }
+   .swiper-button-prev {
+      &:before {
+         left: rem(75);
+      }
+   }
+}
+
+.microliving-swiper {
+   // .microliving-swiper__left-box
+
+   &__left-box {
+      padding-left: rem(70);
+      @include adaptiveValue('padding-left', 70, 30);
+      @media (max-width: $mobile) {
+         padding: 0 rem(15);
+      }
+      h3 {
+         font-family: 'DINNeuzeitGrotesk LT Light';
+         font-style: normal;
+         font-weight: 400;
+         font-size: rem(24);
+         line-height: math.div(30, 24);
+         color: white;
+         @include adaptiveValue('font-size', 24, 18);
+         margin-bottom: rem(35);
+         @include adaptiveValue('margin-bottom', 35, 20);
+      }
+      p {
+         font-family: 'DINNeuzeitGrotesk LT Light';
+         font-style: normal;
+         font-weight: 400;
+         font-size: rem(20);
+         line-height: math.div(30, 20);
+         color: white;
+         @include adaptiveValue('font-size', 20, 16);
+      }
+   }
+
+   // .microliving-swiper__right-box
+
+   &__right-box {
+      padding-right: rem(70);
+
+      @include adaptiveValue('padding-right', 70, 30);
+      @media (max-width: $mobile) {
+         padding: 0 rem(15);
+      }
+      img {
+         max-height: 100%;
+         max-width: 100%;
+         display: block;
+         margin: auto;
+      }
+   }
+}
+
+.apartament {
+   // .apartament__container
+
+   &__slider {
+      overflow: inherit !important;
+      @media (max-width: $tablet) {
+         overflow: hidden !important;
+      }
+   }
+
+   &__img {
+      img {
+         vertical-align: top;
+         max-height: 100%;
+         max-width: 100%;
+         display: block;
+         margin: auto;
+      }
+   }
+}
+.swiper-pagination-apartament {
+   margin-top: rem(30);
+}
+
+.technology {
+   // .technology__container
+
+   &__container {
+   }
+
+   // .technology__descr
+
+   &__descr {
+      max-width: rem(950);
+      font-family: 'DINNeuzeitGrotesk LT Light';
+      font-style: normal;
+      font-weight: 400;
+      font-size: rem(20);
+      line-height: math.div(30, 20);
+
+      color: #000000;
+      @include adaptiveValue('font-size', 20, 16);
+   }
+   &__sub-descr {
+      max-width: rem(720);
+      font-family: 'DINNeuzeitGrotesk LT Light';
+      font-style: normal;
+      font-weight: 400;
+      font-size: rem(20);
+      line-height: math.div(30, 20);
+
+      color: #000000;
+      @include adaptiveValue('font-size', 20, 16);
+   }
+
+   // .technology__sub-title
+
+   &__sub-title {
+      font-weight: 700;
+      font-size: rem(24);
+      line-height: math.div(30, 20);
+      margin-top: rem(40);
+      color: #587c2e;
+      @include adaptiveValue('font-size', 24, 18);
+      @include adaptiveValue('margin-top', 40, 30);
+   }
+
+   // .technology__text-bot
+
+   &__text-bot {
+      font-weight: 400;
+      font-size: rem(16);
+      line-height: math.div(30, 20);
+
+      color: #000000;
+      @include adaptiveValue('font-size', 16, 12);
+   }
+
+   // .technology__img
+
+   &__img {
+      margin-top: rem(90);
+      margin-bottom: rem(154);
+      @include adaptiveValue('margin-bottom', 154, 70);
+      @include adaptiveValue('	margin-top', 90, 50);
+      img {
+         vertical-align: top;
+         max-height: 100%;
+         max-width: 100%;
+         display: block;
+      }
+   }
+}

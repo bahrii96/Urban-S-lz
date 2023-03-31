@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'DINEngschrift';
+    src: url('DINEngschrift.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bahnschrift';
+    src: url('Bahnschrift.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Baskerville';
+    src: url('MBaskerville.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DINNeuzeitGrotesk LT';
+    src: url('DINNeuzeitGroteskLT-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+

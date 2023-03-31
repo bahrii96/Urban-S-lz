@@ -1,0 +1,72 @@
+// Заголовки, общие БЄМ блоки и проче...
+.title {
+   font-family: 'DINEngschrift';
+   font-weight: 400;
+   font-size: rem(95.8);
+   line-height: 115px;
+   line-height: math.div(115, 95.8);
+   padding-top: rem(75);
+   color: #fff;
+   @include adaptiveValue('font-size', 95.8, 26);
+
+   @include adaptiveValue('padding-top', 75, 30);
+}
+.title-green {
+   color: #587c2e;
+}
+
+.zum-contact {
+   // .zum-contact__container
+   background: #587c2e;
+   padding-top: rem(60);
+   padding-bottom: rem(60);
+   @include adaptiveValue('padding-top', 60, 35);
+   @include adaptiveValue('padding-bottom', 60, 35);
+
+   &__container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: rem(20);
+      @media (max-width: $mobileSmall) {
+         flex-direction: column;
+      }
+   }
+
+   // .zum-contact__subtitle
+
+   &__subtitle {
+      flex: 1 1;
+      font-family: 'Baskerville';
+      font-style: normal;
+      font-weight: 700;
+      font-size: rem(28);
+      line-height: math.div(34, 28);
+
+      color: #ffffff;
+      max-width: rem(600);
+      @include adaptiveValue('font-size', 28, 16);
+      @media (max-width: $mobileSmall) {
+         text-align: center;
+      }
+   }
+
+   // .zum-contact__form-btn
+}
+.button-green {
+   background: #a6cf4c;
+   box-shadow: 10px 6px 25px 1px rgba(0, 0, 0, 0.19);
+   border-radius: rem(43);
+   padding: rem(12) rem(40);
+   color: #fff;
+   font-family: 'DINNeuzeitGrotesk LT Light';
+   font-style: normal;
+   font-weight: 400;
+   font-size: rem(20);
+   text-transform: uppercase;
+   line-height: math.div(30, 20);
+   @include adaptiveValue('font-size', 20, 14);
+}
+html {
+   scroll-behavior: smooth;
+}

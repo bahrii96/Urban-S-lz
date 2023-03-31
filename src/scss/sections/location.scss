@@ -1,0 +1,218 @@
+.location {
+   // .location__overlay
+   &__header-body {
+      position: relative;
+      h2 {
+         max-width: rem(300);
+         text-align: right;
+         margin-left: auto;
+         padding-bottom: rem(495);
+         @include adaptiveValue(' padding-bottom', 495, 300);
+      }
+   }
+   &__overlay {
+      position: absolute;
+      background-image: url('./../img/location.png');
+      background-position: top center;
+      background-repeat: no-repeat;
+      z-index: -7;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+   }
+
+   // .location__container
+
+   &__container {
+   }
+
+   // .location__bookmark
+
+   &__bookmark {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+
+      display: inline-block;
+      background-color: #587c2e;
+      padding-left: rem(125);
+      padding-right: rem(160);
+
+      padding-top: rem(35);
+      padding-bottom: rem(35);
+      @include adaptiveValue('padding-left', 125, 25);
+      @include adaptiveValue('padding-right', 110, 60);
+      @include adaptiveValue('padding-top', 35, 15);
+      @include adaptiveValue('padding-bottom', 35, 15);
+      li {
+         margin-top: rem(30);
+         @include adaptiveValue('margin-top', 30, 18);
+      }
+   }
+
+   // .location__bookmark-title
+
+   &__bookmark-title {
+      font-family: 'Baskerville';
+      font-style: normal;
+      font-weight: 700;
+      font-size: rem(30);
+      line-height: math.div(30, 30);
+      color: #a6cf4c;
+      @include adaptiveValue('font-size', 30, 18);
+   }
+
+   // .location__bookmark-number
+
+   &__bookmark-number {
+      font-family: 'Baskerville';
+      font-style: normal;
+      font-weight: 700;
+      font-size: rem(26);
+      display: block;
+      color: #ffffff;
+      @include adaptiveValue('font-size', 26, 16);
+   }
+
+   // .location__bookmark-text
+
+   &__bookmark-text {
+      font-family: 'Baskerville';
+      font-style: normal;
+      font-weight: 400;
+      font-size: rem(20);
+
+      color: #ffffff;
+      @include adaptiveValue('font-size', 20, 14);
+   }
+   .zum-contact {
+      margin-top: rem(60);
+      @include adaptiveValue('margin-top', 60, 35);
+   }
+}
+
+.culture {
+   // .culture__container
+   position: relative;
+   &__container {
+   }
+   &__text-box {
+      max-width: rem(620);
+      @include adaptiveValue('max-width', 620, 350, 1440, 769, 1);
+      @media (max-width: $mobile) {
+         max-width: 100%;
+      }
+   }
+
+   // .culture__text
+
+   &__text {
+      font-family: 'DINNeuzeitGrotesk LT Light';
+      font-style: normal;
+      font-weight: 400;
+      font-size: rem(20);
+
+      line-height: math.div(30, 20);
+      margin-top: rem(52);
+      padding-bottom: rem(10);
+      @include adaptiveValue('font-size', 20, 16);
+      @include adaptiveValue('margin-top', 52, 30);
+
+      color: #000000;
+   }
+
+   li {
+      list-style: disc;
+      font-family: 'DINNeuzeitGrotesk LT Light';
+      font-style: normal;
+      font-weight: 400;
+      font-size: rem(20);
+
+      line-height: math.div(30, 20);
+
+      margin-top: rem(10);
+      margin-left: rem(20);
+      @include adaptiveValue('font-size', 20, 16);
+   }
+
+   // .culture__img
+
+   &__img {
+      position: absolute;
+      top: rem(75);
+      right: 0;
+      @include adaptiveValue('top', 75, 30);
+      @media (max-width: $mobile) {
+         display: none;
+      }
+      img {
+         width: rem(600);
+         @include adaptiveValue('width', 600, 350, 1440, 769, 1);
+      }
+   }
+}
+.loc-maps {
+   position: relative;
+   margin-top: rem(20);
+   // .loc-maps__maps
+
+   &__maps {
+      position: absolute;
+      left: 0;
+      top: rem(75);
+
+      @include adaptiveValue('top', 75, 30);
+      iframe {
+         width: rem(830);
+         height: rem(640);
+         @include adaptiveValue('width', 830, 420, 1440, 769, 1);
+         @include adaptiveValue('height', 640, 300, 1440, 769, 1);
+         @media (max-width: $mobile) {
+            width: 100%;
+            height: rem(300);
+         }
+      }
+      @media (max-width: $mobile) {
+         position: relative;
+      }
+   }
+
+   // .loc-maps__container
+
+   &__container {
+      display: flex;
+      justify-content: end;
+      @media (max-width: $mobile) {
+         justify-content: start;
+      }
+   }
+
+   // .loc-maps__text
+
+   &__text {
+      // max-width: rem(360);
+      padding-bottom: rem(420);
+      @include adaptiveValue('padding-bottom', 420, 100, 1440, 767, 1);
+      @media (max-width: $mobile) {
+         padding-bottom: rem(20);
+      }
+   }
+
+   // .loc-maps__title
+
+   &__subtitle {
+      font-family: 'Baskerville';
+      font-style: normal;
+      font-weight: 500;
+      font-size: rem(28);
+      line-height: math.div(34, 28);
+      color: #678f0f;
+      @include adaptiveValue('font-size', 28, 16);
+      margin-bottom: rem(30);
+   }
+   h2 {
+      color: #678f0f;
+   }
+}
+.button-green {
+}

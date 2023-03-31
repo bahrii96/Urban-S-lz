@@ -1,0 +1,369 @@
+.contact {
+   position: relative;
+   // .contact__overlay
+   padding-bottom: rem(125);
+   @include adaptiveValue('padding-bottom', 125, 65);
+
+   &__overlay {
+      position: absolute;
+      background-image: url('./../img/contact.png');
+      background-position: top center;
+      background-repeat: no-repeat;
+      z-index: -7;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+   }
+
+   // .contact__bookmark
+
+   &__bookmark {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 15;
+      display: inline-block;
+      background-color: #587c2e;
+      padding-left: rem(125);
+      padding-right: rem(40);
+
+      padding-top: rem(35);
+      padding-bottom: rem(35);
+      @include adaptiveValue('padding-left', 125, 25);
+      @include adaptiveValue('padding-right', 40, 20);
+      @include adaptiveValue('padding-top', 35, 15);
+      @include adaptiveValue('padding-bottom', 35, 15);
+      li {
+         margin-top: rem(30);
+         @include adaptiveValue('margin-top', 30, 18);
+      }
+      @media (max-width: $tablet) {
+         position: relative;
+         transform: translateY(0);
+      }
+   }
+   &__bookmark-box {
+      max-width: rem(335);
+      @include adaptiveValue('max-width', 335, 250, 1140, 991, 1);
+      @media (max-width: $tablet) {
+         max-width: 100%;
+      }
+   }
+   // .contact__bookmark-title
+
+   &__bookmark-title {
+      font-family: 'Baskerville';
+      font-style: normal;
+      font-weight: 700;
+      font-size: rem(30);
+      line-height: math.div(30, 30);
+      color: #ffffff;
+      @include adaptiveValue('font-size', 30, 18);
+   }
+   // .contact__address
+
+   &__address {
+      font-family: 'Baskerville';
+      font-style: normal;
+      font-weight: 400;
+      font-size: rem(18);
+
+      color: #ffffff;
+      margin-top: rem(35);
+      @include adaptiveValue('	margin-top', 35, 15);
+      @include adaptiveValue('font-size', 18, 14);
+   }
+
+   // .contact__tel
+
+   &__tel {
+      font-family: 'Baskerville';
+      font-style: normal;
+      font-weight: 400;
+      font-size: rem(18);
+
+      color: #ffffff;
+      @include adaptiveValue('	margin-top', 10, 5);
+      @include adaptiveValue('font-size', 18, 14);
+   }
+
+   // .contact__site
+
+   &__site {
+      font-family: 'Baskerville';
+      font-style: normal;
+      font-weight: 400;
+      font-size: rem(18);
+
+      color: #ffffff;
+      margin-top: rem(35);
+      @include adaptiveValue('	margin-top', 35, 15);
+      @include adaptiveValue('font-size', 18, 14);
+   }
+
+   // .contact__container
+
+   &__container {
+   }
+
+   // .contact__form
+   &__form-cont {
+      padding-top: rem(150);
+      @include adaptiveValue('padding-top', 150, 50);
+      @media (max-width: $tablet) {
+         padding-top: rem(0);
+      }
+   }
+   &__form {
+      background-color: #ffffff;
+      padding-right: rem(100);
+      padding-left: rem(490);
+
+      // @include adaptiveValue('margin-top', 150, 100);
+      @include adaptiveValue('padding-left', 490, 400, 1140, 991, 1);
+      @include adaptiveValue('padding-right', 100, 60, 1140, 991, 1);
+      @media (max-width: $tablet) {
+         padding-right: rem(20);
+         padding-left: rem(20);
+      }
+
+      // background-color: rgb(116, 41, 41);
+   }
+
+   // .contact__form-box
+
+   &__form-box {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: rem(16);
+      @media (max-width: $mobileSmall) {
+         display: flex;
+         flex-direction: column;
+         gap: 0;
+      }
+   }
+
+   // .contact__form-item
+
+   &__form-item {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: rem(10);
+      label {
+         font-family: 'DINNeuzeitGrotesk LT Light';
+         font-style: normal;
+         font-weight: 400;
+         font-size: rem(12);
+         line-height: math.div(16, 12);
+         letter-spacing: 0.09em;
+         text-transform: uppercase;
+         color: #587c2e;
+      }
+      input,
+      select {
+         height: rem(60);
+         border: rem(1) solid #587c2e;
+         @include adaptiveValue('height', 60, 30);
+      }
+      .select {
+         appearance: none;
+         width: 100%;
+      }
+      .select-box {
+         &:after {
+            position: absolute;
+            content: '';
+            background-image: url('./../img/arrow.svg');
+            background-position: top center;
+            background-repeat: no-repeat;
+            background-size: contain;
+
+            right: rem(20);
+            top: 50%;
+            width: rem(30);
+            height: rem(30);
+            pointer-events: none;
+            @media (max-width: $mobile) {
+               right: rem(10);
+               top: 50%;
+               width: rem(15);
+               height: rem(15);
+            }
+         }
+      }
+      input:focus,
+      textarea:focus,
+      select:focus {
+         outline: rem(1.5) solid #587c2e;
+      }
+      textarea {
+         border: rem(1) solid #587c2e;
+         margin-bottom: rem(43);
+         @include adaptiveValue('margin-bottom', 43, 25);
+      }
+   }
+   button {
+      margin-top: rem(35);
+      margin-bottom: rem(70);
+      @include adaptiveValue('margin-bottom', 70, 40);
+   }
+   // .contact__form-box-big
+
+   &__form-box-big {
+      display: grid;
+      grid-template-columns: 1.9fr 0.1fr;
+      gap: rem(16);
+      @media (max-width: $mobileSmall) {
+         display: flex;
+         flex-direction: column;
+         gap: 0;
+      }
+   }
+
+   // .contact__form-box-chekbox
+
+   &__form-box-chekbox {
+      display: flex;
+      gap: rem(13);
+      align-items: center;
+      margin-top: rem(25);
+      @include adaptiveValue('margin-top', 25, 10);
+      p {
+         flex: 1 1;
+         font-family: 'DINNeuzeitGrotesk LT Light';
+         font-style: normal;
+         font-weight: 400;
+         font-size: rem(14);
+         line-height: math.div(16, 14);
+         letter-spacing: -0.015em;
+
+         color: #587c2e;
+      }
+   }
+}
+.contact__form-box-chekbox {
+   .container {
+      display: block;
+      position: relative;
+      width: rem(35);
+      height: rem(35);
+      user-select: none;
+   }
+
+   /* Hide the browser's default checkbox */
+   .container input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+   }
+
+   /* Create a custom checkbox */
+   .checkmark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 25px;
+      width: 25px;
+      border: 1px solid #a6cf4c;
+   }
+
+   /* On mouse-over, add a grey background color */
+   // .container:hover input ~ .checkmark {
+   //    background-color: #a6cf4c;
+   //    border: 1px solid #a6cf4c;
+   // }
+
+   /* When the checkbox is checked, add a blue background */
+   .container input:checked ~ .checkmark {
+      border: 1px solid #a6cf4c;
+   }
+
+   /* Create the checkmark/indicator (hidden when not checked) */
+   .checkmark:after {
+      content: '';
+      position: absolute;
+      display: none;
+   }
+
+   /* Show the checkmark when checked */
+   .container input:checked ~ .checkmark:after {
+      display: block;
+   }
+
+   /* Style the checkmark/indicator */
+   .container .checkmark:after {
+      left: 9px;
+      top: 5px;
+      width: 5px;
+      height: 10px;
+      border: solid #a6cf4c;
+      border-width: 0 3px 3px 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+   }
+}
+/* Customize the label (the container) */
+.partners {
+   // .partners__container
+
+   &__container {
+   }
+
+   // .partners__box
+
+   &__box {
+      display: flex;
+      gap: rem(115);
+      background-color: #fff;
+      padding-top: rem(55);
+      padding-bottom: rem(55);
+      margin-top: rem(65);
+      padding-left: rem(55);
+      padding-right: rem(55);
+      @include adaptiveValue('gap', 115, 20);
+      @include adaptiveValue('margin-top', 65, 30);
+      @include adaptiveValue('padding-top', 55, 30);
+      @include adaptiveValue('padding-bottom', 55, 30);
+
+      @media (max-width: $mobile) {
+         flex-direction: column;
+         align-items: center;
+         padding-left: rem(15);
+         padding-right: rem(15);
+         h3 {
+            text-align: center;
+         }
+      }
+   }
+
+   // .partners__item
+
+   &__item {
+   }
+   h3 {
+      font-family: 'Baskerville';
+      font-style: normal;
+      font-weight: 700;
+      font-size: rem(30);
+      line-height: 115px;
+      line-height: math.div(115, 30);
+
+      color: #587c2e;
+      @include adaptiveValue('font-size', 30, 16);
+   }
+
+   // .partners__img
+
+   &__img {
+      img {
+         max-width: 100%;
+         min-height: 100%;
+         display: block;
+         margin: auto;
+      }
+   }
+}
