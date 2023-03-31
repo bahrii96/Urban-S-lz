@@ -907,6 +907,10 @@ html {
   color: #587c2e;
 }
 
+.contact__form-item input {
+  padding-left: 0.625rem;
+}
+
 .contact__form-item input,
 .contact__form-item select {
   height: 3.75rem;
@@ -955,6 +959,7 @@ html {
 }
 
 .contact__form-item textarea {
+  padding-left: 0.625rem;
   border: 0.0625rem solid #587c2e;
   margin-bottom: 2.6875rem;
 }
@@ -997,13 +1002,6 @@ html {
 }
 
 .contact__form-box-chekbox {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.8125rem;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   margin-top: 1.5625rem;
 }
 
@@ -1020,9 +1018,6 @@ html {
 }
 
 .contact__form-box-chekbox p {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1;
-          flex: 1 1;
   font-family: "DINNeuzeitGrotesk LT Light";
   font-style: normal;
   font-weight: 400;
@@ -1030,6 +1025,19 @@ html {
   line-height: 1.1428571429;
   letter-spacing: -0.015em;
   color: #587c2e;
+  margin-left: 3.125rem;
+}
+
+@supports (margin-left: clamp( 1.875rem , 1.4152298851rem  +  2.2988505747vw , 3.125rem )) {
+  .contact__form-box-chekbox p {
+    margin-left: clamp( 1.875rem , 1.4152298851rem  +  2.2988505747vw , 3.125rem );
+  }
+}
+
+@supports not (margin-left: clamp( 1.875rem , 1.4152298851rem  +  2.2988505747vw , 3.125rem )) {
+  .contact__form-box-chekbox p {
+    margin-left: calc(1.875rem + 1.25 * (100vw - 20rem) / 54.375);
+  }
 }
 
 .contact__form-box-chekbox {
@@ -1045,8 +1053,7 @@ html {
 .contact__form-box-chekbox .container {
   display: block;
   position: relative;
-  width: 2.1875rem;
-  height: 2.1875rem;
+  width: 100%;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;

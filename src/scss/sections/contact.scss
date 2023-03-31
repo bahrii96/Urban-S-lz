@@ -160,6 +160,9 @@
          text-transform: uppercase;
          color: #587c2e;
       }
+      input {
+         padding-left: rem(10);
+      }
       input,
       select {
          height: rem(60);
@@ -198,6 +201,7 @@
          outline: rem(1.5) solid #587c2e;
       }
       textarea {
+         padding-left: rem(10);
          border: rem(1) solid #587c2e;
          margin-bottom: rem(43);
          @include adaptiveValue('margin-bottom', 43, 25);
@@ -224,13 +228,13 @@
    // .contact__form-box-chekbox
 
    &__form-box-chekbox {
-      display: flex;
-      gap: rem(13);
-      align-items: center;
+      // display: flex;
+      // gap: rem(13);
+      // align-items: center;
       margin-top: rem(25);
       @include adaptiveValue('margin-top', 25, 10);
       p {
-         flex: 1 1;
+         //  flex: 1 1;
          font-family: 'DINNeuzeitGrotesk LT Light';
          font-style: normal;
          font-weight: 400;
@@ -239,6 +243,8 @@
          letter-spacing: -0.015em;
 
          color: #587c2e;
+         margin-left: rem(50);
+         @include adaptiveValue('margin-left', 50, 30);
       }
    }
 }
@@ -246,8 +252,8 @@
    .container {
       display: block;
       position: relative;
-      width: rem(35);
-      height: rem(35);
+      width: 100%;
+      // height: rem(35);
       user-select: none;
    }
 
