@@ -2498,6 +2498,7 @@ html {
             justify-content: center;
     width: 100%;
     top: 0;
+    right: -100%;
     background-color: #587c2e;
     -webkit-transition: right 0.3s ease 0s;
     -o-transition: right 0.3s ease 0s;
