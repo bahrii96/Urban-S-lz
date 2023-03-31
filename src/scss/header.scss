@@ -95,12 +95,17 @@
    &__body {
       @media (max-width: $mobile) {
          position: fixed;
+         z-index: 10;
+         display: flex;
+         align-items: center;
+         justify-content: center;
          width: 100%;
-         height: 100%;
          top: 0;
-         right: -100%;
+         //  right: -100%;
          background-color: #587c2e;
-         transition: all 0.3s ease 0s;
+         transition: right 0.3s ease 0s;
+         height: 100vh;
+         overflow-y: auto;
       }
    }
 
@@ -147,11 +152,6 @@
 .menu-open {
    .menu__body {
       right: 0;
-      z-index: 10;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
    }
 }
 //====================================================================================================
