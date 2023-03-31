@@ -135,6 +135,11 @@
 .menu-open {
    .menu__body {
       right: 0;
+      z-index: 10;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
    }
 }
 //====================================================================================================
@@ -149,7 +154,7 @@
       width: rem(30);
       height: rem(18);
       cursor: pointer;
-      z-index: 5;
+      z-index: 11;
       margin-left: auto;
       margin-top: rem(35);
       span,
